@@ -16,7 +16,7 @@ export default function SplashScreen() {
     >
       <View style={styles.contentWrapper}>
         <View style={styles.content}>
-          <Text style={styles.title}>DishApp</Text>
+          <Text style={styles.title}>cooksnap</Text>
           <Text style={styles.subtitle}>
             From ingredients to ideas{'\n'}AI helps you build better, balanced meals
           </Text>

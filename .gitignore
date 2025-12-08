@@ -1,0 +1,6 @@
+myshitdonttouch/
+.env.override
+Front-end/.expo/
+Front-end/node_modules/
+node_modules/
+**/node_modules/

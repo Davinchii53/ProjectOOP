@@ -1,0 +1,20 @@
+{
+    "name": "cooksnap-frontend",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "cooksnap",
+    "workspaceFolder": "/app",
+    "envFile": "../.env",
+    "shutdownAction": "stopCompose",
+  
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "msjsdiag.vscode-react-native",
+          "expo.vscode-expo-tools"
+        ]
+      }
+    }
+  }
+  

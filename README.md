@@ -15,14 +15,10 @@ dockerfile dan composenya udah ada tinggal build jadi kalian gausah lagi install
 **DOCKERFILE JANGAN DIPEGANG**
 
 ## docker build script
-udah gw buatin script automatis buat ngebuild kalian main di folder Front-end aja. 
-scriptnya bakal langsung jalanin expo langsung jadi tinggal ngoding aja dia bakal hot reload sesuai fitur expo
-
+udah gw buatin script automatis kalian tinggal pake dev container untuk ngoding saja, tapi pertama ip kalian harus dobutuhkan untuk ngeforward port di expo
 jalaninnya:
 
 (linux)
-
-
 bikin jadi executable dulu
 ```bash
 chmod u+x
@@ -30,25 +26,18 @@ chmod u+x
 
 baru nyalain scriptnya (butuh sudo)
 ```bash 
-sudo ./up.cmd
+sudo ./setup.cmd
 ```
 
 windows
 
-langsung klik 2 kali script up.cmd aja
+langsung klik 2 kali script setup.cmd aja
 
 ## IMPORTANT
 **JANGAN PERNAH INSTALL DEPENDENCY LANGSUNG DI PC KALIAN**
+**INSTALL DEV CONTAINER DULU**
 
-
-kalo mau nambahin depedency buat aplikasinya **TOLONG INSTALL LANGSUNG DI DOCKER IMAGENYA** dengan buka **TERMINAL KEDUA LALU JALANKAN**
-
-
-
-jalanin ini
-```bash
-docker exec -it cooksnap-frontend sh
-```
+kalo mau nambahin depedency buat aplikasinya **TOLONG INSTALL LANGSUNG DI DOCKER IMAGENYA** dengan menjalankan dev container: ctrl+shift+p, dev container: reopen in container
 baru install dependency yang dibutuhkan
 
 contoh install dependencies dalam Docker:
@@ -59,6 +48,4 @@ or
 ```bash
 npx expo install <expo-package>
 ```
-
-jangan pernah **MATIIN** container saat install dependencies.
 

@@ -33,11 +33,23 @@ windows
 
 langsung klik 2 kali script setup.cmd aja
 
+## nyalain expo server
+
+pake ini:
+
+
+```bash
+npx expo start --lan
+```
+
 ## IMPORTANT
 **JANGAN PERNAH INSTALL DEPENDENCY LANGSUNG DI PC KALIAN**
+
 **INSTALL DEV CONTAINER DULU**
 
-kalo mau nambahin depedency buat aplikasinya **TOLONG INSTALL LANGSUNG DI DOCKER IMAGENYA** dengan menjalankan dev container: ctrl+shift+p, dev container: reopen in container
+kalo mau nambahin depedency buat aplikasinya **TOLONG INSTALL LANGSUNG DI DOCKER CONTAINERNYA** 
+
+dengan menjalankan dev container: ctrl+shift+p, dev container: reopen in container/open in container
 baru install dependency yang dibutuhkan
 
 contoh install dependencies dalam Docker:
@@ -48,4 +60,5 @@ or
 ```bash
 npx expo install <expo-package>
 ```
-
+untuk keluar dari remote folder docker di vscode tinggal
+dev container: reopen folder locally

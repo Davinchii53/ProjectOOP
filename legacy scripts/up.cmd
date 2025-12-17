@@ -35,8 +35,8 @@ else
 fi
 
 # Export IP and run docker
-export REACT_NATIVE_PACKAGER_HOSTNAME=$IP
-docker compose --env-file .env.override up
+echo "REACT_NATIVE_PACKAGER_HOSTNAME=$IP" >> .env
+docker compose --env-file .env up
 
 exit 0
 
@@ -59,6 +59,6 @@ echo VOLUME_OVERRIDE=./Front-end:/app > .env
 
 
 REM 3. Set env var and run docker
-set REACT_NATIVE_PACKAGER_HOSTNAME=%IP%
-docker compose --env-file .env.override up
+echo "REACT_NATIVE_PACKAGER_HOSTNAME=%IP%" >> .env
+docker compose --env-file .env up
 

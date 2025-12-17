@@ -20,7 +20,7 @@ echo "Host LAN IP: $IP"
 
 # Export IP and run docker
 export REACT_NATIVE_PACKAGER_HOSTNAME=$IP
-docker compose --env-file .env.override down
+docker compose --env-file .env down
 exit 0
 
 :WINDOWS
@@ -38,4 +38,4 @@ echo Host LAN IP: %IP%
 
 
 set REACT_NATIVE_PACKAGER_HOSTNAME=%IP%
-docker compose --env-file .env.override down
+docker compose --env-file .env down

@@ -11,15 +11,33 @@ import {
   FlatList,
 } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import { uploadImage } from '../utils/aiservice';
 
-export default function DetectedScreen() {
+export default function DetectedScreen({route}) {
   const navigation = useNavigation<any>();
-  const route = useRoute<any>();
   const [difficulty, setDifficulty] = React.useState('');
   const [dietary, setDietary] = React.useState('');
   const [cuisine, setCuisine] = React.useState('');
 
-  const sampleIngredients = ['Tomato', 'Onion', 'Garlic', 'Bell Pepper', 'Potato'];
+  const {
+    image,
+  } = route.params;
+
+  const [sampleIngredients, setSampleIngredients] = React.useState<string[]>(["Loading..."]);
+
+  React.useEffect(() => {
+    const fetchIngredients = async () => {
+      try {
+        const result = await uploadImage(image);
+        setSampleIngredients(result);
+      } catch (err) {
+        console.error('Upload failed:', err);
+      }
+    };
+
+    fetchIngredients();
+  }, []);
+
 
   return (
     <SafeAreaView style={styles.container}>
@@ -83,7 +101,7 @@ export default function DetectedScreen() {
                 style={styles.picker}
               >
                 <Picker.Item label="Choose option..." value="" />
-                <Picker.Item label="None" value="none" />
+                <Picker.Item label="None" value="no special diet" />
                 <Picker.Item label="Vegan" value="vegan" />
                 <Picker.Item label="Vegetarian" value="vegetarian" />
                 <Picker.Item label="Keto" value="keto" />
@@ -105,14 +123,26 @@ export default function DetectedScreen() {
                 <Picker.Item label="Western" value="western" />
                 <Picker.Item label="Asian" value="asian" />
                 <Picker.Item label="Indonesian" value="indonesian" />
-                <Picker.Item label="Middle-Eastern" value="middle-eastern" />
+                <Picker.Item label="Middle-Eastern" value="middle eastern" />
+                <Picker.Item label="Indian" value="indian" />
+                <Picker.Item label="Fusion" value="fusion" />
               </Picker>
             </View>
           </View>
         </View>
 
-        <TouchableOpacity style={[styles.btnGenerate, styles.btnGenerateActive]}>
-          <Text style={styles.btnGenerateActiveText}>Generate Recipe ✨</Text>
+        <TouchableOpacity 
+        style={[styles.btnGenerate, styles.btnGenerateActive]}
+        onPress={() =>
+            navigation.navigate('Recipe', {
+              passedIngredients: sampleIngredients,
+              passedDifficulty: difficulty,
+              passedDietary: dietary,
+              passedCuisine: cuisine,
+            })
+          }
+        >
+            <Text style={styles.btnGenerateActiveText}>Generate Recipe ✨</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>

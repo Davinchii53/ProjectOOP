@@ -34,7 +34,7 @@ export default function UploadScreen() {
         // Simulate ingredient detection
         setTimeout(() => {
           navigation.navigate('Detected', {
-            image: result.assets[0].uri,
+            image: result.assets[0],
           });
         }, 500);
       }

@@ -1,0 +1,42 @@
+{
+    "data":{
+        "name":"Chicken and Broccoli Rice Skillet",
+        "difficulty":"medium",
+        "diet":"none",
+        "kind_of_food":"random",
+        "prep_time":"15 minutes",
+        "cook_time":"30 minutes",
+        "ingredients":[
+            "2 boneless, skinless chicken breasts (about 400g), cut into bite-sized pieces",
+            "1 cup uncooked long-grain white rice",
+            "2 cups broccoli florets",
+            "2 cups chicken broth",
+            "1 small onion, diced",
+            "2 cloves garlic, minced",
+            "2 tablespoons olive oil",
+            "1 teaspoon salt",
+            "1/2 teaspoon black pepper",
+            "1/2 teaspoon paprika",
+            "1/2 teaspoon dried thyme"
+        ],
+        "steps":[
+            "Heat 1 tablespoon olive oil in a large skillet over medium-high heat. Add chicken pieces, season with salt, pepper, paprika, and thyme. Cook until chicken is golden and cooked through, about 6-8 minutes. Remove chicken and set aside.",
+            "Add remaining olive oil and sauté onions until translucent, about 3 minutes. Add garlic and cook for 1 more minute.",
+            "Add uncooked rice to the skillet, stir and toast for 2 minutes.",
+            "Pour in chicken broth and bring to a boil. Reduce heat to low, cover, and simmer for 10 minutes.",
+            "Add broccoli florets to the skillet, stir gently, cover again, and cook for another 10-12 minutes until rice is tender and liquid is absorbed.",
+            "Return cooked chicken to the skillet and gently mix with rice and broccoli. Let everything warm together for 2-3 minutes.",
+            "Taste and adjust seasoning with extra salt or pepper if needed. Serve hot."
+        ],
+        "tips":[
+            "For creamier texture, add 1/2 cup grated cheese right before serving.",
+            "You can substitute brown rice but increase the broth and cooking time accordingly.",
+            "Add bell peppers or carrots for extra color and nutrition."
+        ],
+        "video_data":[
+            {"title":"One Pot Chicken Broccoli and Rice","url":"https://www.youtube.com/watch?v=bdxl6_xr13Y"},
+            {"title":"Chicken Rice and Broccoli Skillet -- Fast and Easy One Pot Meal","url":"https://www.youtube.com/watch?v=yLNl2O-sABc"},
+            {"title":"The EASIEST Chicken & Broccoli Rice Ever! (One Pan, 30 ...","url":"https://www.youtube.com/watch?v=6ncQPbmVy2Q"}
+        ]
+    }
+}

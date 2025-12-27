@@ -5,6 +5,7 @@ import SplashScreen from './app/screens/SplashScreen';
 import UploadScreen from './app/screens/UploadScreen';
 import PreferencesScreen from './app/screens/PrefrencesScreen';
 import DetectedScreen from './app/screens/DetectedScreen';
+import RecipeScreen from './app/screens/RecipeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,10 @@ export default function App() {
         <Stack.Screen 
           name="Detected" 
           component={DetectedScreen}
+        />
+        <Stack.Screen 
+          name="Recipe" 
+          component={RecipeScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

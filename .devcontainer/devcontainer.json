@@ -4,6 +4,7 @@
     "service": "cooksnap",
     "workspaceFolder": "/app",
     "envFile": "../.env",
+    "postCreateCommand": "npm install --legacy-peer-deps",
     "shutdownAction": "stopCompose",
   
     "customizations": {

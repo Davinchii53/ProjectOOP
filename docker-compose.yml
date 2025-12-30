@@ -1,9 +1,8 @@
 services:
   cooksnap:
-    container_name: cooksnap-frontend
     image: node:20-slim
     working_dir: /app
-
+    command: sleep infinity
     ports:
       - "8081:8081"
       - "8082:8082"
@@ -18,10 +17,6 @@ services:
 
     stdin_open: true
     tty: true
-
-    command: >
-      sh -c "
-      npm install --legacy-peer-deps"
 
 volumes:
   cooksnap_node_modules:

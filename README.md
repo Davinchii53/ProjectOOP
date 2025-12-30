@@ -1,64 +1,66 @@
-# cooksnap Prototype
+# CookSnap – AI-Powered Food Ingredient Detection APP (project oop group 9)
 
-Ini masih UI yang awalan. Kalo yang ngeluarin hasil cek aja di Figma.  
-Kalo mau liat hasilnya harus lewat Expo Go karena gua pake itu works, tapi mau pake apapun bebas.  
-Ini udh bagus, smooth ga usah di ganti-ganti lagi, tinggal lanjutin aja bagian kedua UI nya.
+CookSnap adalah aplikasi berbasis Artificial Intelligence (AI) yang bertujuan membantu masyarakat Indonesia dalam menentukan menu masakan berdasarkan bahan makanan yang tersedia. Repository ini berisi backend service yang menangani pemrosesan AI, deteksi bahan makanan dari gambar, serta rekomendasi resep yang relevan.
 
-**Side note**: Picker yang dari React Native itu terpisah dari import yang lain, jadi jangan kaget, karena harus download dari `@react-native-picker/picker` langsung jadi harus download dulu.
+# Latar Belakang 
+Banyak masyarakat masih mengalami kebingungan dalam menentukan menu masakan meskipun memiliki bahan makanan yang cukup di rumah. CookSnap hadir sebagai solusi dengan memanfaatkan Computer Vision dan Large Language Model (LLM) untuk:
 
-Pokoknya ini setengah udh jadi, lanjutin aja, jangan ganti-ganti lagi yang bagian gua.
+- Mengidentifikasi bahan makanan melalui gambar
 
-# dokumentasi docker buat front end dev
+- Memberikan rekomendasi resep yang sesuai
 
-dockerfile dan composenya udah ada tinggal build jadi kalian gausah lagi install depedencies yang dibutuhin buat expo -  react
+- Mendukung gaya hidup sehat
 
-**DOCKERFILE JANGAN DIPEGANG**
+- Mengurangi limbah makanan
 
-## docker build script
-udah gw buatin script automatis kalian tinggal pake dev container untuk ngoding saja, tapi pertama ip kalian harus dobutuhkan untuk ngeforward port di expo
-jalaninnya:
+- Menghemat waktu dalam persiapan memasak
 
-(linux)
-bikin jadi executable dulu
-```bash
-chmod u+x
-```
+# Tujuan Aplikasi
 
-baru nyalain scriptnya (butuh sudo)
-```bash 
-sudo ./setup.cmd
-```
+1) Menyediakan API untuk deteksi bahan makanan berbasis gambar
 
-windows
+2) Menghasilkan rekomendasi resep berdasarkan bahan yang terdeteksi
 
-langsung klik 2 kali script setup.cmd aja
+# Fitur Utama Aplikasi
 
-## nyalain expo server
+- Image recognition untuk bahan makanan
 
-pake ini:
+- Recipe recommendation berbasis AI
+
+- Integrasi LLM untuk pemrosesan bahasa alami
+
+- Dukungan prompt chaining untuk hasil yang lebih kontekstual
+
+- Siap diintegrasikan dengan Mobile App (React Native)
+
+# Tech Stack
+## Backend
+
+- Python
+
+- LangChain
+
+- Azure OpenAI
+  - GPT-4.1
+
+  - Image recognition
+
+  - Large Language Model (LLM)
+
+ - Tavily (Web search & enrichment data)
+
+## Frontend 
+
+- React Native
+
+- Expo
+
+# Video Demonstrasi
+1) upload image dari galeri
 
 
-```bash
-npx expo start --lan
-```
+![demov1](demo/demov1.gif)
 
-## IMPORTANT
-**JANGAN PERNAH INSTALL DEPENDENCY LANGSUNG DI PC KALIAN**
+2) langsung foto bahannnya
 
-**INSTALL DEV CONTAINER DULU**
-
-kalo mau nambahin depedency buat aplikasinya **TOLONG INSTALL LANGSUNG DI DOCKER CONTAINERNYA** 
-
-dengan menjalankan dev container: ctrl+shift+p, dev container: reopen in container/open in container
-baru install dependency yang dibutuhkan
-
-contoh install dependencies dalam Docker:
-```bash
-npm install <package>
-```
-or
-```bash
-npx expo install <expo-package>
-```
-untuk keluar dari remote folder docker di vscode tinggal
-dev container: reopen folder locally
+![demov2](demo/Demov2.gif)
